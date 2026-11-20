@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta
+    name="description"
+    content="LOX is a cinematic production studio creating premium commercials, storytelling and social media content."
+  >
+  <link rel="icon" type="image/png" href="images/favicon.png?v=2">
+  <meta name="theme-color" content="#0F5A43">
+
+  <title>Home — LOX</title>
+
+  <!--
+    أيقونة الموقع بجانب اسم الصفحة:
+    ضع صورة شعار مربعة باسم favicon.png داخل مجلد images،
+    ثم احذف علامتي التعليق المحيطتين بسطر link التالي.
+  -->
+  <!-- <link rel="icon" type="image/png" href="images/favicon.png?v=2"> -->
+
+  <!-- بيانات الموقع عند مشاركة الرابط -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="LOX">
+  <meta property="og:title" content="LOX — Cinematic Production">
+  <meta
+    property="og:description"
+    content="Cinematic production, commercials and social content. From the first conversation to the final frame."
+  >
+  <meta property="og:url" content="https://loxmediaa.com/">
+
+  <!--
+    صورة معاينة الرابط عند المشاركة:
+    ضع صورتك باسم social-preview.jpg داخل مجلد images.
+    مقاس مقترح: 1200 × 630 بكسل.
+    احذف علامتي التعليق حول المجموعة التالية بعد إضافة الصورة.
+    إذا نشرت الموقع على عنوان آخر، غيّر الدومين في روابط الصور و og:url.
+  -->
+  <!--
+  <meta property="og:image" content="https://loxmediaa.com/images/social-preview.jpg">
+  <meta property="og:image:alt" content="LOX cinematic production studio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://loxmediaa.com/images/social-preview.jpg">
+  -->
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="brands.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a class="logo" href="index.html">LOX</a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero film -->
+    <section class="hero">
+      <video
+        src="videos/jinna%20vibe.mp4"
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        tabindex="0"
+        role="button"
+        aria-label="Pause background film"
+        data-interactive-video
+      ></video>
+
+      <div class="hero-sound">
+        <button
+          class="sound-toggle"
+          type="button"
+          aria-label="Enable sound"
+          aria-pressed="false"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            aria-hidden="true"
+          >
+            <path d="M11 5 6 9H3v6h3l5 4V5Z" />
+            <path
+              class="sound-waves"
+              d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"
+            />
+            <path class="sound-cross" d="m16 9 6 6m0-6-6 6" />
+          </svg>
+          <span>Sound off</span>
+        </button>
+      </div>
+
+      <p class="video-error" role="status" hidden>
+        The background film could not be loaded.
+      </p>
+
+      <div class="hero-content">
+        <p class="subtitle">LOX · CINEMATIC PRODUCTION</p>
+        <h1 class="title">
+          Stories you can feel.<br>
+          Frames you remember.
+        </h1>
+        <p class="hero-copy">
+          Cinematic production, commercials and social content.
+          From the first conversation to the final frame.
+        </p>
+        <a class="cta" href="work.html">Explore our work ↗</a>
+      </div>
+    </section>
+
+
+    
+    <section class="brands-section" aria-labelledby="brands-title">
+      <div class="brands-heading">
+        <div><p class="brands-kicker"><span aria-hidden="true">✳</span> SHARED STORIES</p><h2 id="brands-title">Good company.<br><em>Great stories.</em></h2></div>
+        <div class="brands-intro"><p>Brands we've worked with.<br>Different worlds. The same attention to every frame.</p><button class="marquee-toggle" type="button" aria-pressed="false" aria-controls="brand-marquee">Pause movement <span aria-hidden="true">Ⅱ</span></button></div>
+      </div>
+      <div class="brands-marquee" id="brand-marquee" tabindex="0" aria-label="Brand logos. Focus or hover to pause movement.">
+        <div class="brands-track">
+          <ul class="brands-group" aria-label="Collaborations">
+          <li class="brand-item"><img class="brand-logo dentakay" src="images/brands/dentakay.svg" alt="Dentakay" width="180" height="40"></li>
+          <li class="brand-item"><img class="brand-logo lema" src="images/brands/lema-wordmark.webp" alt="LEMA Dental Clinic" width="210" height="34"></li>
+          <li class="brand-item"><img class="brand-logo atolye" src="images/brands/atolye.svg" alt="Harley Atölye" width="170" height="67"></li>
+          <li class="brand-item"><span class="tactical-wordmark" aria-label="1911 TACTİCAL"><span>1911</span><span>TACTİCAL</span></span></li>
+          <li class="brand-item"><img class="brand-logo psa" src="images/brands/psa.png" alt="PSA" width="171" height="187"></li>
+          <li class="brand-item"><img class="brand-logo avrupadis" src="images/brands/avrupadis.png" alt="AvrupaDiş" width="1983" height="793"></li>
+          <li class="brand-item"><img class="brand-logo gelisim" src="images/brands/gelisim-universitesi.png" alt="İstanbul Gelişim Üniversitesi" width="361" height="139"></li>
+          </ul>
+          <ul class="brands-group" aria-hidden="true">
+          <li class="brand-item"><img class="brand-logo dentakay" src="images/brands/dentakay.svg" alt="Dentakay" width="180" height="40"></li>
+          <li class="brand-item"><img class="brand-logo lema" src="images/brands/lema-wordmark.webp" alt="LEMA Dental Clinic" width="210" height="34"></li>
+          <li class="brand-item"><img class="brand-logo atolye" src="images/brands/atolye.svg" alt="Harley Atölye" width="170" height="67"></li>
+          <li class="brand-item"><span class="tactical-wordmark" aria-label="1911 TACTİCAL"><span>1911</span><span>TACTİCAL</span></span></li>
+          <li class="brand-item"><img class="brand-logo psa" src="images/brands/psa.png" alt="PSA" width="171" height="187"></li>
+          <li class="brand-item"><img class="brand-logo avrupadis" src="images/brands/avrupadis.png" alt="AvrupaDiş" width="1983" height="793"></li>
+          <li class="brand-item"><img class="brand-logo gelisim" src="images/brands/gelisim-universitesi.png" alt="İstanbul Gelişim Üniversitesi" width="361" height="139"></li>
+          </ul>
+        </div>
+      </div>
+      <div class="brands-caption"><span><i aria-hidden="true"></i> REAL COLLABORATIONS, SHARED EXPERIENCE</span></div>
+    </section>
+
+    <!-- Our approach -->
+    <section class="section">
+      <p class="subtitle">THE APPROACH</p>
+      <h2>
+        Your story.<br>
+        Considered from every angle.
+      </h2>
+
+      <div class="service-grid">
+        <article>
+          <h3>01 / Understand</h3>
+          <p>
+            We start with your brand, your audience and the story you want to tell.
+          </p>
+        </article>
+
+        <article>
+          <h3>02 / Create</h3>
+          <p>
+            We shape the idea into cinematic visuals and a focused production plan.
+          </p>
+        </article>
+
+        <article>
+          <h3>03 / Deliver</h3>
+          <p>
+            Films and content created for the screens where your audience watches.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Start a project -->
+    <section class="story">
+      <h2>Have a story to tell?</h2>
+      <p>Tell us about your brand and we will shape the film around it.</p>
+      <a class="cta" href="contact.html">Start a project ↗</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>LOX · Cinematic production studio</span>
+    <a href="mailto:welcome@loxmediaa.com">welcome@loxmediaa.com</a>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script src="brands.js" defer></script>
+  <script src="media-controls.js" defer></script>
+</body>
+</html>

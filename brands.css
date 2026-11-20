@@ -1,0 +1,44 @@
+/* LOX collaboration marquee. Each identical group includes its own trailing space,
+   so translating exactly half of the track produces a seamless loop. */
+:root{--lox-dark:#111111;--lox-green:#0F5A43;--lox-orange:#E28A34;--lox-cream:#E7E1D6}
+.brands-section{background:var(--lox-dark);color:var(--lox-cream);padding:78px 0 28px;overflow:hidden}
+.brands-heading{width:88%;max-width:1200px;margin:0 auto 45px;display:flex;justify-content:space-between;gap:32px;align-items:flex-end}
+.brands-kicker{font-size:10px;letter-spacing:2.8px;color:var(--lox-orange);margin-bottom:24px;display:flex;gap:12px;align-items:center}
+.brands-kicker span{font-size:22px;line-height:1}
+.brands-heading h2{font-family:Georgia,serif;font-size:clamp(39px,4.7vw,66px);line-height:1.06;font-weight:400;letter-spacing:-1.8px}
+.brands-heading h2 em{font-weight:400;color:var(--lox-orange)}
+.brands-intro{max-width:340px;padding-bottom:3px}
+.brands-intro p{font-size:13px;line-height:1.9;color:#bdb8af}
+.marquee-toggle{margin-top:20px;border:1px solid #e7e1d638;background:transparent;color:var(--lox-cream);font-size:11px;min-height:44px;padding:10px 15px;display:inline-flex;gap:24px;align-items:center;transition:background .2s,border-color .2s}
+.marquee-toggle:hover{background:var(--lox-green);border-color:var(--lox-green)}
+.brands-marquee{border-block:1px solid #e7e1d624;overflow:hidden;position:relative;isolation:isolate}
+.brands-marquee::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--lox-dark),transparent 7%,transparent 93%,var(--lox-dark));z-index:1}
+.brands-track{display:flex;width:max-content;animation:brand-drift 42s linear infinite;will-change:transform}
+.brands-group{display:flex;align-items:center;list-style:none;flex-shrink:0;margin:0;padding:0}
+.brand-item{flex:0 0 240px;width:240px;height:152px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px 25px}
+.brand-logo{display:block;max-width:100%;height:auto;max-height:70px;object-fit:contain;filter:grayscale(1);opacity:.74;transition:opacity .3s,filter .3s,transform .3s}
+.brand-item:hover .brand-logo{opacity:1;filter:grayscale(0);transform:scale(1.045)}
+.brand-logo.dentakay{filter:invert(1);opacity:.74}
+.brand-item:hover .dentakay{filter:invert(1);opacity:1}
+.brand-logo.lema{width:210px;max-height:45px}
+.brand-logo.atolye{width:170px;max-height:75px}
+/* Show the central supplied logo, without editing or regenerating the JPEG. */
+.tactical-window{position:relative;width:150px;height:108px;overflow:hidden;mix-blend-mode:screen}
+.brand-logo.tactical{position:absolute;max-width:none;max-height:none;width:520px;height:auto;left:50%;top:50%;transform:translate(-50%,-50%)}
+.brand-item:hover .tactical{transform:translate(-50%,-50%) scale(1.045)}
+.tactical-wordmark{display:flex;flex-direction:column;align-items:center;gap:4px;color:var(--lox-cream);opacity:.74;transition:opacity .3s,transform .3s;font-family:Georgia,'Times New Roman',serif;font-weight:900;line-height:1;text-align:center}
+.tactical-wordmark>span:first-child{font-size:52px;letter-spacing:-2px}
+.tactical-wordmark>span:last-child{font-size:22px;letter-spacing:1px}
+.brand-item:hover .tactical-wordmark{opacity:1;transform:scale(1.045)}
+.brand-logo.psa{width:64px;height:auto;border-radius:12px}
+.brand-logo.avrupadis,
+.brand-item:hover .brand-logo.avrupadis{filter:grayscale(1) brightness(1.8) invert(1) contrast(6);opacity:1}
+.brand-logo.gelisim{width:180px;height:auto;border-radius:4px}
+.brands-caption{width:88%;max-width:1200px;margin:22px auto 0;display:flex;gap:18px;justify-content:space-between;align-items:center;font-size:9px;line-height:1.8;letter-spacing:1px;color:#a9a49b}
+.brands-caption span{display:flex;align-items:center;gap:9px}
+.brands-caption i{width:6px;height:6px;border-radius:50%;background:var(--lox-orange);flex-shrink:0}
+.brands-marquee:hover .brands-track,.brands-marquee:focus-within .brands-track,.brands-section.is-paused .brands-track,.brands-section.is-offscreen .brands-track,.brands-section.is-hidden .brands-track{animation-play-state:paused}
+@keyframes brand-drift{to{transform:translateX(-50%)}}
+@media(min-width:1800px){.brand-item{flex-basis:300px;width:300px}}
+@media(max-width:600px){.brands-section{padding-top:52px}.brands-heading{display:block;margin-bottom:28px}.brands-heading h2{letter-spacing:-1px}.brands-intro{margin-top:24px;max-width:none;display:flex;align-items:center;gap:18px;justify-content:space-between}.brands-intro p{font-size:11px;max-width:210px}.marquee-toggle{margin:0;gap:10px;font-size:10px;flex-shrink:0;padding:10px}.brands-kicker{margin-bottom:20px}.brand-item{flex-basis:200px;width:200px;height:134px;padding:16px 24px}.brands-caption{flex-direction:column;align-items:flex-start;gap:8px}.brand-logo.lema{width:160px}}
+@media(prefers-reduced-motion:reduce){.brands-track{animation:none;transform:none;will-change:auto}.brands-marquee{overflow-x:auto}.brands-marquee::after{display:none}.brands-group[aria-hidden=true]{display:none}.marquee-toggle{display:none}.brand-logo{transition:none}}
